@@ -1,0 +1,30 @@
+extends admin
+
+block head
+	title
+		-if(title.empty)
+			| Crete
+		-else
+			| Edit
+	link(rel='stylesheet', type='text/css', href='../main.css')
+
+
+block left	
+	-if(title.empty)					
+		h1 Create Post:			
+	-else
+		h1 Edit Post:	
+	form(method='post', action='#{action}')
+		p
+			label Title:				
+				input(name='postTitle', type='text', value='#{title}', required)
+		p
+			label Tags:				
+				input(name='postTags', type='text', value='#{tags}', required)
+		p
+			label Text:
+				p
+					textarea(name='postText')
+						| #{text}
+		p
+			button(type='submit') Create Post

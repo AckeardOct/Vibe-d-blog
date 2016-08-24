@@ -1,0 +1,22 @@
+extends layout
+
+block head
+	title Administration
+	link(rel='stylesheet', type='text/css', href='../main.css')
+
+block hrefPost
+	a(href="/admin/#{post.id}") #{post.title}
+
+block hrefTag
+	a(href="/admin/tag/#{tag}") #{tag}
+
+block actions
+	h1 Actions:
+	ul
+		li
+			a(href="/create") Create
+
+block admin
+	h3 
+		a(href="/edit/#{post.id}") edit
+		a(href="/remove/#{post.id}") remove

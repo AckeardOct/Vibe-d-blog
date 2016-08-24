@@ -1,0 +1,15 @@
+{
+	"authors": [
+		"atg"
+	],
+	"name": "blog",
+	"license": "proprietary",
+	"copyright": "Copyright © 2016, atg",
+	"description": "A simple vibe.d server application.",
+	"dependencies": {
+		"vibe-d": "~>0.7.26"
+	},
+	"versions": [
+		"VibeDefaultMain"
+	]
+}

@@ -1,0 +1,47 @@
+block import
+html
+    head
+        meta(charset='uts-8')
+        link(rel='stylesheet', type='text/css', href='main.css')
+        link(rel='stylesheet', type='text/css', href='../main.css')
+        link(rel='stylesheet', type='text/css', href='../../main.css')
+        block head
+            title
+                -if(posts.length == 1)
+                    | #{posts[0].title}
+                -else
+                    | Ackeard Oct
+    body
+        .main
+            .header
+                h1
+                    a(href="/") Ackeard Oct
+            .duo
+                .left
+                    block left
+                        -if(!searchTag.empty)
+                            h1 #{searchTag}
+                        -foreach(post; posts)
+                            .post
+                                .postTitle
+                                    h2
+                                        block hrefPost
+                                            a(href="/post/#{post.id}") #{post.title}
+                                .postTags
+                                    -foreach(tag; post.tags)
+                                        .postTag
+                                            block hrefTag
+                                                a(href="/tag/#{tag}") #{tag}
+                                .adminButtons
+                                    block admin
+                                .postText !{post.text}
+                                .postDate #{post.date}
+                .right
+                    block actions
+                    block right
+                        h1 Tags
+                        .rightList
+                            ul
+                                -foreach(tag; allTags)
+                                    li
+                                        a(href="/tag/#{tag}") #{tag}

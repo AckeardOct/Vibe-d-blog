@@ -1,0 +1,51 @@
+body{
+	background-color: grey;
+}
+
+.main{
+	width: 100%;	
+}
+
+.header{
+	//background-color: green;
+	text-align: center;
+	border-bottom: dashed 2px;
+}
+
+.duo{
+	width: 100%;	
+}
+
+.left{
+	width: 70%;
+	//height: 80%;
+	//background-color: red;
+	float: left;
+	padding: 1%;
+	border-right: dashed 2px;
+}
+
+.right{
+	width: 25%;
+	//height: 80%;
+	//background-color: blue;	
+	float: left;
+	//border-left: dashed 2px;	
+	padding: 1%;
+}
+
+.duo h1{
+	text-align: center;
+}
+
+form{
+	text-align: center;
+}
+
+form input, textarea{
+	width: 80%;
+}
+
+form textarea{
+	height: 60%;
+}
